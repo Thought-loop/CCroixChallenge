@@ -1,15 +1,17 @@
 <template>
   <div id="app">
-      <nav> Navbar </nav>
+      <status-bar />
   </div>
 </template>
 
 <script>
+import StatusBar from './components/StatusBar.vue'
 
 
 export default {
   name: 'App',
   components: {
+    StatusBar
     
   }
 }
