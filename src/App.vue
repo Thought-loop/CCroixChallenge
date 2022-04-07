@@ -1,9 +1,9 @@
 <template>
   <div id="app">
       <status-bar />
-      <photo-area v-bind:areaTitle="notAsscTitle" v-bind:photos="photoRange(1,100)" v-bind:expanded="false" @show-modal="showModal"/>
-      <photo-area v-bind:areaTitle="uploadTitle" v-bind:photos="photoRange(101,146)" v-bind:expanded="true"/>
       <photo-modal v-bind:image='currentModalImage' v-if="displayModal" v-on:click="toggleModal" />
+      <photo-area v-bind:areaTitle="notAsscTitle" v-bind:photos="photoRange(1,100)" v-bind:expanded="false" @show-modal="showModal"/>
+      <photo-area v-bind:areaTitle="uploadTitle" v-bind:photos="photoRange(101,146)" v-bind:expanded="true" @show-modal="showModal"/>
   </div>
 </template>
 
@@ -23,8 +23,8 @@ export default {
   data(){
 
     return{
-            uploadTitle: 'Photos to Upload',
-            notAsscTitle: 'Photos not Associated',
+            uploadTitle: 'Photos to upload',
+            notAsscTitle: 'Photos not associated',
             currentModalImage: null,
             displayModal: false
         }

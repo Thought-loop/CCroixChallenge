@@ -3,10 +3,9 @@
         <div class = 'photo-container-top-bar'>
             <h2>{{ title }}</h2>
             <div class = 'photo-container-top-bar-control'>
-                <!-- <h3>{{numPhotos}} Photos</h3> -->
-                <h3>FIX Photos</h3>
-                <img v-bind:src=upIconURL v-on:click='expandRetract' v-if='!expandArea' />
-                <img v-bind:src=downIconURL v-on:click='expandRetract' v-if='expandArea' />
+                <h3>{{numPhotos}} Photos</h3>
+                <img v-bind:src=upIconURL v-on:click='expandRetract' v-if='expandArea' />
+                <img v-bind:src=downIconURL v-on:click='expandRetract' v-if='!expandArea' />
             </div>
             
         </div>
@@ -19,7 +18,7 @@
 <script>
 import PhotoTile from './PhotoTile.vue'
 export default {
-    name: 'photo-tile',
+    name: 'photo-area',
     emits: ['show-modal'],
     components: { PhotoTile },
   props: {
@@ -57,13 +56,18 @@ export default {
     }
 
     .photo-container-top-bar{
-        margin-inline: 5%;
+        margin-inline: 1vw;
         display: flex;
         justify-content: space-between;
+
     }
 
     .photo-container-top-bar-control{
         display:flex;
+        justify-content: right;
+        flex-grow: .5;
+
+        
     }
 
     .photo-container-photos{

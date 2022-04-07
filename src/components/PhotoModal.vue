@@ -33,11 +33,16 @@ export default {
 /* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
+  margin: 1% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
-  height: auto;
-  max-width: 80%; /* Could be more or less, depending on screen size */
+  height: fit-content;
+  max-width: fit-content; /* Could be more or less, depending on screen size */
+}
+
+.modal-image{
+  max-height: 90vh;
+  max-width: 90vw;
 }
 
 </style>
