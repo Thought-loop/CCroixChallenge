@@ -1,17 +1,20 @@
 <template>
   <div id="app">
       <status-bar />
+      <photo-area />
   </div>
 </template>
 
 <script>
+import PhotoArea from './components/PhotoArea.vue'
 import StatusBar from './components/StatusBar.vue'
 
 
 export default {
   name: 'App',
   components: {
-    StatusBar
+    StatusBar,
+    PhotoArea
     
   }
 }
