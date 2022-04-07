@@ -2,6 +2,7 @@
   <div class="modal">
       <div class="modal-content">
         <img class="modal-image" v-bind:src=image.path />
+        <span class="modal-image-info">{{image.category}} | {{image.id}} | {{image.caption}}</span>
       </div>
   </div>
 </template>
@@ -27,11 +28,13 @@ export default {
   /* height: 65vw; Full height */
   overflow: clip; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgba(0, 0, 0, 0.575); /* Black w/ opacity */
 }
 
 /* Modal Content/Box */
 .modal-content {
+  display: flex;
+  flex-direction: column;
   background-color: #fefefe;
   margin: 1% auto; /* 15% from the top and centered */
   padding: 20px;
@@ -41,7 +44,8 @@ export default {
 }
 
 .modal-image{
-  max-height: 90vh;
+  object-fit: cover;
+  min-height: 95vh;
   max-width: 90vw;
 }
 

@@ -53,6 +53,7 @@ export default {
     .photo-container{
         margin: 4%;
         border-style: solid;
+        background-color: dimgray;
     }
 
     .photo-container-top-bar{
