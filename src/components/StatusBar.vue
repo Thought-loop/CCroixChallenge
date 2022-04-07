@@ -33,6 +33,7 @@ export default {
     .bar{
         display: flex;
         justify-content: space-between;
+        margin-inline: 5%;
     }
 
     .bar-logo{

@@ -1,8 +1,8 @@
 <template>
   <div id="app">
       <status-bar />
-      <photo-area v-bind:areaTitle="notAsscTitle" v-bind:photos="photoRange(1,100)"/>
-      <photo-area v-bind:areaTitle="uploadTitle" v-bind:photos="photoRange(101,146)"/>
+      <photo-area v-bind:areaTitle="notAsscTitle" v-bind:photos="photoRange(1,100)" v-bind:expanded="false" @show-modal="showModal"/>
+      <photo-area v-bind:areaTitle="uploadTitle" v-bind:photos="photoRange(101,146)" v-bind:expanded="true"/>
   </div>
 </template>
 
@@ -29,10 +29,10 @@ export default {
       for (let i = min-1; i <= max-1; i++) {
         photos.push(this.$store.state.images[i]);
       }
-      console.table(photos);
       return photos;
-      // min=max;
-      // return this.$store.state.images;
+    },
+    showModal(image){
+      
     }
   }
 }
