@@ -1,6 +1,9 @@
 <template>
     <div class = 'photo-container'>
-        <photo-tile v-for='image in $store.state.images' v-bind:image="image" v-bind:key="image.id" />
+        <h2>{{ title }}</h2>
+        <div class = 'photo-container-photos'>
+            <photo-tile v-for='image in images' v-bind:image="image" v-bind:key="image.id" />
+        </div>
     </div>
 </template>
 
@@ -8,15 +11,30 @@
 import PhotoTile from './PhotoTile.vue'
 export default {
   components: { PhotoTile },
+  props: {
+        areaTitle: String,
+        photos: Array 
+    },
+    data(){
+        return {
+            title: this.areaTitle,
+            images: this.photos
+        }
+    }
 
 }
 </script>
 
 <style>
     .photo-container{
+        margin: 4%;
+    }
+
+    .photo-container-photos{
         display: flex;
         flex-wrap: wrap;
-        width: 50%;
+        justify-content: space-evenly;
+        width: 100%;
     }
 
 
