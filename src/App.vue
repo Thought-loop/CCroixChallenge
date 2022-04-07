@@ -3,11 +3,13 @@
       <status-bar />
       <photo-area v-bind:areaTitle="notAsscTitle" v-bind:photos="photoRange(1,100)" v-bind:expanded="false" @show-modal="showModal"/>
       <photo-area v-bind:areaTitle="uploadTitle" v-bind:photos="photoRange(101,146)" v-bind:expanded="true"/>
+      <photo-modal v-bind:image='currentModalImage' v-if="displayModal" v-on:click="toggleModal" />
   </div>
 </template>
 
 <script>
 import PhotoArea from './components/PhotoArea.vue'
+import PhotoModal from './components/PhotoModal.vue'
 import StatusBar from './components/StatusBar.vue'
 
 
@@ -15,12 +17,16 @@ export default {
   name: 'App',
   components: {
     StatusBar,
-    PhotoArea
+    PhotoArea,
+    PhotoModal
   },
   data(){
-        return{
+
+    return{
             uploadTitle: 'Photos to Upload',
-            notAsscTitle: 'Photos not Associated'
+            notAsscTitle: 'Photos not Associated',
+            currentModalImage: null,
+            displayModal: false
         }
     },
   methods: {
@@ -32,7 +38,11 @@ export default {
       return photos;
     },
     showModal(image){
-      
+      this.currentModalImage=image;
+      this.displayModal = true;
+    },
+    toggleModal(){
+      this.displayModal = !this.displayModal;
     }
   }
 }

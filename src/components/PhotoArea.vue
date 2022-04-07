@@ -3,7 +3,8 @@
         <div class = 'photo-container-top-bar'>
             <h2>{{ title }}</h2>
             <div class = 'photo-container-top-bar-control'>
-                <h3>{{numPhotos}} Photos</h3>
+                <!-- <h3>{{numPhotos}} Photos</h3> -->
+                <h3>FIX Photos</h3>
                 <img v-bind:src=upIconURL v-on:click='expandRetract' v-if='!expandArea' />
                 <img v-bind:src=downIconURL v-on:click='expandRetract' v-if='expandArea' />
             </div>
