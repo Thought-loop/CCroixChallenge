@@ -55,6 +55,13 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  
+  padding: 1vh;
+  min-height: 94vh;
+
+  background-image: url("https://c.pxhere.com/images/8c/78/40e243d8510805a3abc997d0e3b7-1433401.jpg!d");
+  background-attachment: fixed;
+  background-size: 100%;
+
 }
 </style>

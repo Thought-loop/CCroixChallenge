@@ -23,7 +23,7 @@ export default {
   z-index: 1; /* Sit on top */
   left: 0;
   top: 0;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   /* height: 65vw; Full height */
   overflow: clip; /* Enable scroll if needed */
@@ -39,14 +39,16 @@ export default {
   margin: 1% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
-  height: fit-content;
+  max-height: 90vh;
+  height: 95%;
   max-width: fit-content; /* Could be more or less, depending on screen size */
 }
 
 .modal-image{
   object-fit: cover;
-  min-height: 95vh;
-  max-width: 90vw;
+  height: 100%;
+  /* max-height: 95vh;
+  max-width: 90vw; */
 }
 
 </style>

@@ -37,7 +37,7 @@ export default {
     }
 
     .bar-logo{
-        height: 10rem;
+        height: 7vh;
     }
 
     .bar-status-area{

@@ -51,9 +51,9 @@ export default {
 
 <style>
     .photo-container{
-        margin: 4%;
+        margin: 30px 5%;
         border-style: solid;
-        background-color: dimgray;
+        background-color: rgba(105, 105, 105, 0.75);
     }
 
     .photo-container-top-bar{
@@ -67,8 +67,6 @@ export default {
         display:flex;
         justify-content: right;
         flex-grow: .5;
-
-        
     }
 
     .photo-container-photos{
