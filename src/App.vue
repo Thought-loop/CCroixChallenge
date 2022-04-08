@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-      <status-bar />
+      <status-bar v-bind:numPhotos="totalPhotos"/>
       <photo-modal v-bind:image='currentModalImage' v-if="displayModal" v-on:click="toggleModal" />
       <photo-area v-bind:areaTitle="notAsscTitle" v-bind:photos="photoRange(1,54)" v-bind:expanded="false" @show-modal="showModal"/>
       <photo-area v-bind:areaTitle="uploadTitle" v-bind:photos="photoRange(55,146)" v-bind:expanded="true" @show-modal="showModal"/>
@@ -29,21 +29,26 @@ export default {
             displayModal: false
         }
     },
-  methods: {
-    photoRange(min, max){
-      let photos = [];
-      for (let i = min-1; i <= max-1; i++) {
-        photos.push(this.$store.state.images[i]);
+    computed: {
+        totalPhotos(){
+            return this.$store.state.images.length;
+        }
+    },
+    methods: {
+      photoRange(min, max){
+        let photos = [];
+        for (let i = min-1; i <= max-1; i++) {
+          photos.push(this.$store.state.images[i]);
+        }
+        return photos;
+      },
+      showModal(image){
+        this.currentModalImage=image;
+        this.displayModal = true;
+      },
+      toggleModal(){
+        this.displayModal = !this.displayModal;
       }
-      return photos;
-    },
-    showModal(image){
-      this.currentModalImage=image;
-      this.displayModal = true;
-    },
-    toggleModal(){
-      this.displayModal = !this.displayModal;
-    }
   }
 }
 </script>
@@ -66,6 +71,10 @@ export default {
 }
 
 @media only screen and (max-width: 1000px) {
+        .bar{
+          margin: 0px;
+        }
+
         .photo-tile{
             width: 25vw;
             height: 25vw;
@@ -74,6 +83,27 @@ export default {
 
         .photo-container{
           margin: 30px 0%;
+        }
+    }
+
+    @media only screen and (max-width: 800px) {
+    
+        .modal-content{
+          padding: 10px;
+        }
+    }
+    
+    @media only screen and (max-width: 700px) {
+        .bar{
+          font-size: 12px;
+        }
+
+        .photo-container{
+          margin: 15px 0%;
+        }
+
+        .modal{
+          overflow:scroll;
         }
     }
 </style>

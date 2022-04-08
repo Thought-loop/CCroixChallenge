@@ -1,6 +1,5 @@
 <template>
   <div class="photo-tile">
-      <!-- <img class="photo-background" v-bind:src=image.path> -->
       <img class="photo" v-bind:src=image.path>
       
   </div>

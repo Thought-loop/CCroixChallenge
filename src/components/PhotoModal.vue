@@ -43,7 +43,7 @@ export default {
 }
 
 .modal-image{
-  object-fit: cover;
+  object-fit: scale-down;
   height: 100%;
   /* max-height: 95vh;
   max-width: 90vw; */

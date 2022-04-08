@@ -8,7 +8,7 @@
           </div>
           <div class = "bar-photo-count">
             <h3>Photos</h3>
-            <h3>100</h3>
+            <h3>{{$numPhotos}}</h3>
           </div>
           <div class = "bar-upload-info">
             <h3>Last upload xx/xx/xxxx x:xx</h3>
@@ -25,6 +25,9 @@ export default {
         return{
             logo: 'https://uxwing.com/wp-content/themes/uxwing/download/32-video-photography-multimedia/image-upload.png'
         }
+    },
+    props: {
+        numPhotos: Number
     }
 }
 </script>
@@ -48,9 +51,15 @@ export default {
             "upload upload";
     }
 
+    .bar-status-area h3{
+        margin: 3px;
+    }
+
     .bar-connection-status{
         grid-area: connection;
     }
+
+    
 
     .bar-photo-count{
         grid-area: count;
