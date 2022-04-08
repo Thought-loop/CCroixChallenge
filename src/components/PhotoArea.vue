@@ -3,7 +3,7 @@
         <div class = 'photo-container-top-bar'>
             <h2 class = 'photo-container-top-bar-title'>{{ title }}</h2>
             <div class = 'photo-container-top-bar-control'>
-                <h2>{{numPhotos}} Photos</h2>
+                <h2 v-bind:style="{color: countColor}">{{numPhotos}} Photos</h2>
                 <img v-bind:src=upIconURL v-on:click='expandRetract' v-if='expandArea' />
                 <img v-bind:src=downIconURL v-on:click='expandRetract' v-if='!expandArea' />
             </div>
@@ -24,7 +24,7 @@ export default {
   props: {
         areaTitle: String,
         photos: Array,
-        expanded: Boolean 
+        expanded: Boolean
     },
     data(){
         return {
@@ -38,6 +38,14 @@ export default {
     computed: {
         numPhotos(){
             return this.selectedPhotos.length;
+        },
+        countColor(){
+            if(this.title == 'Photos Not Associated'){
+                return 'firebrick'
+            }
+            else{
+                return 'green'
+            }
         }
     },
     methods:{
@@ -63,8 +71,7 @@ export default {
         font-size: 15px;
 
     }
-
-
+    
     .photo-container-top-bar-control{
         display:flex;
         justify-content: right;
@@ -78,6 +85,6 @@ export default {
         width: 100%;
     }
 
-    
+
 
 </style>

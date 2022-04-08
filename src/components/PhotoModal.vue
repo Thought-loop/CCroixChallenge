@@ -33,7 +33,7 @@ export default {
 .modal-content {
   display: flex;
   flex-direction: column;
-  background-color: #fefefe;
+  background-color: #fefefeda;
   margin: 1% auto;
   padding: 20px;
   border: 1px solid #888;

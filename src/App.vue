@@ -4,6 +4,7 @@
       <photo-modal v-bind:image='currentModalImage' v-if="displayModal" v-on:click="toggleModal" />
       <photo-area v-bind:areaTitle="notAsscTitle" v-bind:photos="photoRange(1,54)" v-bind:expanded="false" @show-modal="showModal"/>
       <photo-area v-bind:areaTitle="uploadTitle" v-bind:photos="photoRange(55,146)" v-bind:expanded="true" @show-modal="showModal"/>
+      <upload-photo-buttons />
   </div>
 </template>
 
@@ -11,6 +12,7 @@
 import PhotoArea from './components/PhotoArea.vue'
 import PhotoModal from './components/PhotoModal.vue'
 import StatusBar from './components/StatusBar.vue'
+import UploadPhotoButtons from './components/UploadPhotoButtons.vue'
 
 
 export default {
@@ -18,13 +20,14 @@ export default {
   components: {
     StatusBar,
     PhotoArea,
-    PhotoModal
+    PhotoModal,
+    UploadPhotoButtons
   },
   data(){
 
     return{
-            uploadTitle: 'Photos to upload',
-            notAsscTitle: 'Photos not associated',
+            uploadTitle: 'Photos Ready to Upload',
+            notAsscTitle: 'Photos Not Associated',
             currentModalImage: null,
             displayModal: false
         }
