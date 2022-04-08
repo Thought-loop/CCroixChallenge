@@ -1,7 +1,13 @@
 <template>
-  <div class="photo-tile">
-      <img class="photo" v-bind:src=image.path>
-      
+  <div class = "photo-tile-and-text">
+    <div class="photo-tile">
+        <img class="photo" v-bind:src=image.path>
+    </div>
+    <div class = "photo-tile-text">
+        <p>{{image.caption}}</p>
+        <p>{{image.id}}</p>
+        <p>{{image.category}}</p>
+    </div>
   </div>
 </template>
 
@@ -46,6 +52,15 @@ export default {
     .photo-tile:hover{
         border-color:rgb(60, 63, 73);
         background-color: rgba(105, 105, 105, 0.658);
+    }
+
+    .photo-tile-text{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .photo-tile-text p{
+        margin: 0px;
     }
     
     

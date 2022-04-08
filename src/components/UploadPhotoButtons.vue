@@ -25,8 +25,6 @@ export default {
         
     }
 
-    
-
     .action-button{
         display: flex;
         flex-direction: column;
