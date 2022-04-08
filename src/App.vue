@@ -64,4 +64,16 @@ export default {
   background-size: 100%;
 
 }
+
+@media only screen and (max-width: 1000px) {
+        .photo-tile{
+            width: 25vw;
+            height: 25vw;
+            margin: 5px 0%;
+        }
+
+        .photo-container{
+          margin: 30px 0%;
+        }
+    }
 </style>

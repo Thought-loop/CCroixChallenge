@@ -1,9 +1,9 @@
 <template>
     <div class = 'photo-container'>
         <div class = 'photo-container-top-bar'>
-            <h2>{{ title }}</h2>
+            <h2 class = 'photo-container-top-bar-title'>{{ title }}</h2>
             <div class = 'photo-container-top-bar-control'>
-                <h3>{{numPhotos}} Photos</h3>
+                <h2>{{numPhotos}} Photos</h2>
                 <img v-bind:src=upIconURL v-on:click='expandRetract' v-if='expandArea' />
                 <img v-bind:src=downIconURL v-on:click='expandRetract' v-if='!expandArea' />
             </div>
@@ -60,8 +60,10 @@ export default {
         margin-inline: 1vw;
         display: flex;
         justify-content: space-between;
+        font-size: 15px;
 
     }
+
 
     .photo-container-top-bar-control{
         display:flex;
@@ -76,5 +78,6 @@ export default {
         width: 100%;
     }
 
+    
 
 </style>
