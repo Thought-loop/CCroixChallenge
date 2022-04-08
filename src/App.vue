@@ -2,8 +2,8 @@
   <div id="app">
       <status-bar />
       <photo-modal v-bind:image='currentModalImage' v-if="displayModal" v-on:click="toggleModal" />
-      <photo-area v-bind:areaTitle="notAsscTitle" v-bind:photos="photoRange(1,100)" v-bind:expanded="false" @show-modal="showModal"/>
-      <photo-area v-bind:areaTitle="uploadTitle" v-bind:photos="photoRange(101,146)" v-bind:expanded="true" @show-modal="showModal"/>
+      <photo-area v-bind:areaTitle="notAsscTitle" v-bind:photos="photoRange(1,54)" v-bind:expanded="false" @show-modal="showModal"/>
+      <photo-area v-bind:areaTitle="uploadTitle" v-bind:photos="photoRange(55,146)" v-bind:expanded="true" @show-modal="showModal"/>
   </div>
 </template>
 

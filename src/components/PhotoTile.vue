@@ -43,6 +43,11 @@ export default {
         background-color: rgba(105, 105, 105, 0.486);
 
     }
+
+    .photo-tile:hover{
+        border-color:rgb(60, 63, 73);
+        background-color: rgba(105, 105, 105, 0.658);
+    }
     
     
     .photo{
