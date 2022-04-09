@@ -111,4 +111,18 @@ export default {
           overflow:scroll;
         }
     }
+
+    @media only screen and (max-width: 500px) {
+       
+       .action-button{
+        width: 10rem;
+        height: fit-content;
+      } 
+
+      .button-text{
+        font-size:175%;
+      }
+    }
+
+    
 </style>

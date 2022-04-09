@@ -1,6 +1,6 @@
 <template>
   <div class = 'bar'>
-      <img class = 'bar-logo' v-bind:src="logo3" />
+      <img class = 'bar-logo' v-bind:src="logo" />
       <div class = 'bar-status-area'>
           <div class = "bar-connection-status">
             <h3>Current Connection</h3>
@@ -23,9 +23,7 @@ export default {
     name: 'status-bar',
     data(){
         return{
-            logo: 'https://uxwing.com/wp-content/themes/uxwing/download/32-video-photography-multimedia/image-upload.png',
-            logo2: 'https://cdn.iconscout.com/icon/free/png-256/upload-3114477-2598169.png',
-            logo3: 'https://www.protolabs.com/media/5cfh34gx/pl_icon_1_upload_cad.svg'
+            logo: 'https://www.protolabs.com/media/5cfh34gx/pl_icon_1_upload_cad.svg'
         }
     },
     props: {
